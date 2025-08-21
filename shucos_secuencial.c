@@ -76,7 +76,6 @@ void mostrar_estado() {
 
 
 void calcular_precios() {
-    printf("\n[DEBUG] Recalculando precios...\n");
     
     for (int i = 0; i < NUM_PUESTOS; i++) {
         double precio_anterior = puestos[i].precio_actual;
@@ -150,7 +149,6 @@ void procesar_ventas() {
 }
 
 int main() {
-    printf("Inicializando sistema de ventas de shucos...\n");
     inicializar();
     
     printf("Iniciando simulación por %d segundos...\n", SIMULACION_TIEMPO);
@@ -181,7 +179,6 @@ int main() {
     
     
     system("clear");
-    printf("\n🏁 SIMULACIÓN TERMINADA 🏁\n");
     printf("=================================\n");
     printf("RESUMEN FINAL DESPUÉS DE %d SEGUNDOS:\n", SIMULACION_TIEMPO);
     printf("=================================\n");
@@ -220,12 +217,6 @@ int main() {
     printf("Shucos vendidos: %d\n", total_ventas);
     printf("Precio promedio final: Q%.2f\n", precio_promedio);
     printf("Ingreso por shuco: Q%.2f\n", total_ventas > 0 ? total_ingresos / total_ventas : 0);
-    
-    printf("\n[INFO] Versión secuencial completada exitosamente.\n");
-    printf("[INFO] Las tres funciones se ejecutaron secuencialmente:\n");
-    printf("       - Procesar ventas: cada 1 segundo\n");
-    printf("       - Calcular precios: cada 2 segundos\n");
-    printf("       - Mostrar estado: cada 1 segundo\n");
     
     return 0;
 }
