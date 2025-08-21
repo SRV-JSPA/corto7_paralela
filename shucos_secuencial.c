@@ -208,9 +208,6 @@ int main() {
     
     precio_promedio /= NUM_PUESTOS;
     
-    printf("=================================\n");
-    printf("ESTADÍSTICAS FINALES:\n");
-    printf("=================================\n");
     printf("Puesto más exitoso: Puesto %d (%d ventas)\n", 
            puestos[puesto_mas_vendido].id, puestos[puesto_mas_vendido].ventas_totales);
     printf("Ingresos totales: Q%.2f\n", total_ingresos);
